@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB42E8EE-9B46-4753-9A6E-BCFE30D4B37A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JoguinhoLixo</RootNamespace>
+    <AssemblyName>JoguinhoLixo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\..\Desktop\PEN_IS_A_DRIVE\INTERESSA\Arquivos soltos\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Batalha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Batalha.Designer.cs">
+      <DependentUpon>Batalha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dados.Designer.cs">
+      <DependentUpon>Dados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoguinhoLixo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JoguinhoLixo.Designer.cs">
+      <DependentUpon>JoguinhoLixo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personagem.Designer.cs">
+      <DependentUpon>Personagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sett.cs" />
+    <Compile Include="TrocaItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrocaItem.Designer.cs">
+      <DependentUpon>TrocaItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsarItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsarItem.Designer.cs">
+      <DependentUpon>UsarItem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Batalha.resx">
+      <DependentUpon>Batalha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dados.resx">
+      <DependentUpon>Dados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JoguinhoLixo.resx">
+      <DependentUpon>JoguinhoLixo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personagem.resx">
+      <DependentUpon>Personagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrocaItem.resx">
+      <DependentUpon>TrocaItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsarItem.resx">
+      <DependentUpon>UsarItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\castle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\castle-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sparkle-weapon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grass.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KingImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warriorImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archerImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerigImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mageImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wingedImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarianImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasin - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasinImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horseImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archerenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasinenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarianenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerigenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horseenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kingenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mageenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warriorenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wingedenemyImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archer - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarian - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerig - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mage - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Knights_Shield - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Knights_Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winged - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\winged.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior - Enemy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upgrade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archerenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archerImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasinenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assasinImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarianenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barbarianImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerigenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clerigImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horseenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horseImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kingenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KingImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mageenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mageImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warriorenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warriorImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wingedenemyImgEvol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wingedImgEvol.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
